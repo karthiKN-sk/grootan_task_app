@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "907895220777",
+    "firebase_url": "https://grootan-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "grootan-app",
+    "storage_bucket": "grootan-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907895220777:android:e526f93b6c9fca8eb90a38",
+        "android_client_info": {
+          "package_name": "com.karthikeyan.grootan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7_80p_IgzXkU4PlBQEJrYJBXF9kfKHqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
