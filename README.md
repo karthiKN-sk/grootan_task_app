@@ -17,8 +17,8 @@ A new Flutter project For Grootan Technology With FireBase Authentication and Fi
     <img height= "300" src="screenshots/Screenshot_2023-10-12-12-15-38-746_com.karthikeyan.grootan.jpg" alt="output8" />
     <img height= "300" src="screenshots/Screenshot_2023-10-12-12-15-44-408_com.karthikeyan.grootan.jpg" alt="output9" />
     <img height= "300" src="screenshots/Screenshot_2023-10-12-12-15-47-998_com.karthikeyan.grootan.jpg" alt="output10" />
-    <img height= "300" src="screenshots/Screenshot_1696149055.jpg" alt="output11" />
-    <img height= "300" src="screenshots/Screenshot_1696149055.jpg" alt="output12" />
+    <img height= "300" src="screenshots/Screenshot_2023-10-12-12-15-38-7456_com.karthikeyan.grootan.jpg" alt="output11" />
+    <!-- <img height= "300" src="screenshots/Screenshot_1696149055.jpg" alt="output12" /> -->
 </p>
 
 ## Getting Started
