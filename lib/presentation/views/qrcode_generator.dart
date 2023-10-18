@@ -50,6 +50,7 @@ class _QRCodeGeneratorPageState extends State<QRCodeGeneratorPage> {
     gettingIP();
   }
 
+  ///
   getRefresh() {
     Timer(const Duration(seconds: 2), (() {
       setState(() {
@@ -58,6 +59,7 @@ class _QRCodeGeneratorPageState extends State<QRCodeGeneratorPage> {
     }));
   }
 
+  ///
   gettingIP() async {
     String location = await locationController.getCurrentPosition(context);
     getRefresh();
@@ -73,12 +75,16 @@ class _QRCodeGeneratorPageState extends State<QRCodeGeneratorPage> {
     }
   }
 
+  ///
   String idGenerator() {
     final now = DateTime.now();
     return now.microsecondsSinceEpoch.toString().substring(10, 16);
   }
 
+  ///
   DateTime? currentBackPressTime;
+
+  ///
   Future<bool> onWillPop() {
     DateTime now = DateTime.now();
 
@@ -93,6 +99,7 @@ class _QRCodeGeneratorPageState extends State<QRCodeGeneratorPage> {
     return Future.value(true);
   }
 
+  ///
   @override
   Widget build(BuildContext context) {
     ThemeData themeData = Theme.of(context);
@@ -145,6 +152,7 @@ class _QRCodeGeneratorPageState extends State<QRCodeGeneratorPage> {
   }
 }
 
+///
 class QRCodeGenerator extends StatelessWidget {
   final ThemeData themeData;
   final String idGenerator;

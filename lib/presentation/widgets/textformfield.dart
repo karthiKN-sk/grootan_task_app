@@ -1,14 +1,13 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-
 import '../../app/core/app_themes.dart';
 import '../../app/core/size.dart';
 
 class CustomTextFormFeild extends StatelessWidget {
   final String hintText;
   final String fieldTitle;
- final ValueChanged<String>? onFieldSubmitted;
+  final ValueChanged<String>? onFieldSubmitted;
   final FormFieldValidator<String> validator;
   final TextEditingController controller;
   final TextInputType keyboardType;
@@ -54,7 +53,8 @@ class CustomTextFormFeild extends StatelessWidget {
     required this.themeData,
     required this.fieldTitle,
     this.labelText,
-    this.autofocus = false, this.onFieldSubmitted,
+    this.autofocus = false,
+    this.onFieldSubmitted,
   }) : super(key: key);
 
   @override

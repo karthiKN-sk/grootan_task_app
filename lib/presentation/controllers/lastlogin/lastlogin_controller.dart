@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../data/models/number_gen_model.dart';
 
 class LastLoginController extends GetxController {
+  ///
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
 
 // fetchAllData({

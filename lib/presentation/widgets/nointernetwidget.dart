@@ -14,8 +14,10 @@ class NoInternetWidget extends StatefulWidget {
 }
 
 class _NoInternetWidgetState extends State<NoInternetWidget> {
+  ///
   late ThemeData themeData;
 
+  ///
   @override
   Widget build(BuildContext context) {
     themeData = Theme.of(context);

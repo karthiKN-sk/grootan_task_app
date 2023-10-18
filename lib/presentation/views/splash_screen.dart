@@ -12,6 +12,7 @@ import '../../app/core/app_themes.dart';
 import '../../app/core/size.dart';
 import '../controllers/auth/auth_binding.dart';
 import '../controllers/auth/auth_controller.dart';
+import '../controllers/generate_controller/binding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -53,22 +54,25 @@ class _SplashScreenState extends State<SplashScreen> {
           appBiometric();
         } else {
           ///LoginPage
-          Get.to(const LoginPage(), binding: AuthBindings());
+          Get.offAll(const LoginPage(), binding: AuthBindings());
         }
       },
     );
   }
 
+  ///
   appBiometric() async {
     ///
     final bool canAuthenticateWithBiometrics = await auth.canCheckBiometrics;
     final bool canAuthenticate =
         canAuthenticateWithBiometrics || await auth.isDeviceSupported();
 
+    ///
     if (canAuthenticate) {
       final List<BiometricType> availableBiometrics =
           await auth.getAvailableBiometrics();
 
+      ///
       if (availableBiometrics.isEmpty) {
         isErrorSnackBar(context,
             message: "Biometerics Not Available In this Device");
@@ -81,10 +85,12 @@ class _SplashScreenState extends State<SplashScreen> {
             localizedReason: 'Please authenticate to show Plugin Page',
             options: const AuthenticationOptions(biometricOnly: true));
 
+        ///
         if (didAuthenticate) {
-          Get.offAll(const QRCodeGeneratorPage());
+          Get.offAll(const QRCodeGeneratorPage(),
+              binding: NumberGenerateBindings());
         } else {
-          Get.offAll(const LoginPage());
+          Get.offAll(const LoginPage(), binding: AuthBindings());
         }
       }
     } else {
@@ -93,6 +99,7 @@ class _SplashScreenState extends State<SplashScreen> {
     }
   }
 
+  ///
   @override
   Widget build(BuildContext context) {
     themeData = Theme.of(context);

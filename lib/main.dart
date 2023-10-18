@@ -15,11 +15,16 @@ import 'presentation/views/splash_screen.dart';
 import 'presentation/widgets/nointernetwidget.dart';
 
 Future<void> main() async {
+  ///
   WidgetsFlutterBinding.ensureInitialized();
 
+  ///
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  ///
   await GetStorage.init();
+
+  ///
   runApp(const MyApp());
 }
 
@@ -32,7 +37,14 @@ class MyApp extends StatelessWidget {
     AppSize().init(context);
 
     return GetMaterialApp(
+      title: 'Grootan Task App',
+      themeMode: ThemeService().getThemeMode(),
+      theme: AppTheme.lightThemeData,
+      darkTheme: AppTheme.darkThemeData.copyWith(),
+      home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
       builder: (context, child) {
+        ///
         return GlobalLoaderOverlay(
           useDefaultLoading: false,
           overlayColor: Colors.grey.withOpacity(0.6),
@@ -62,12 +74,6 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      title: 'Grootan Task App',
-      themeMode: ThemeService().getThemeMode(),
-      theme: AppTheme.lightThemeData,
-      darkTheme: AppTheme.darkThemeData,
-      home: const SplashScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

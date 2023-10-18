@@ -24,12 +24,16 @@ class OtpPage extends StatefulWidget {
 class _OtpPageState extends State<OtpPage> {
   ///
   AuthController authController = Get.put(AuthController());
-///
+
+  ///
   GlobalKey<FormState> otpForm = GlobalKey<FormState>();
- ///
+
+  ///
   final TextEditingController otpcontroller = TextEditingController();
-///
+
+  ///
   DateTime? currentBackPressTime;
+
   ///Back Button Tap
   Future<bool> onWillPop() {
     DateTime now = DateTime.now();
